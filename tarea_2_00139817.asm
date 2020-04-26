@@ -37,3 +37,21 @@ section.data
     len         equ     $-comnt
 
 
+;;;;;;;;;;;;;;;;;;;EJERCICIO2
+
+mov	    cx, 0000h
+    mov     ax, 0000h
+    mov	    bx, 0000h
+	mov	    di, 0d
+	mov	    bx, 2d
+	mov	    ax, 4d
+    mov     cx, 0011d
+
+lupita2: mov	[di+210h], ax
+    mul	bx
+	
+	inc	di
+
+	loop	lupita2
+
+
