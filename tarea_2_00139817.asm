@@ -1,9 +1,8 @@
 
-;;;;;;;;;;;;;;;;EJERCICIO 1 ;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;EJERCICIO1;;;;;;;;;;;;;;;;;;
 
     org    100h
     
-
 ;carnet 00139817
 section	.text
 	mov	cx, 0000h
@@ -32,12 +31,8 @@ write	mov	bl, [comnt+di]
 
 	loop	write
 
-section.data
-    comnt      db      "En el segundo"
-    len         equ     $-comnt
 
-
-;;;;;;;;;;;;;;;;;;;EJERCICIO2
+;;;;;;;;;;;;;;;;;;EJERCICIO2;;;;;;;;;;;;;;;;;;
 
 mov	    cx, 0000h
     mov     ax, 0000h
@@ -55,3 +50,32 @@ lupita2: mov	[di+210h], ax
 	loop	lupita2
 
 
+;;;;;;;;;;;;;;;;;;EJERCICIO3;;;;;;;;;;;;;;;;;;
+
+
+mov     ax, 0000h 
+    mov     bx, 0000h
+    mov     cx, 0000h
+    mov     ax, 1d
+    mov     di, 1d
+    mov     cx, 0016d
+    mov     dx,0000h
+
+    lupita:mov    [di + 220h], ax
+    
+    inc     di
+    
+    mov     [200h],ax
+    add     ax, dx
+    mov     dx, [200h]
+
+    loop    lupita
+
+
+    
+    int 20h
+
+    ;;;;;;;;;;;;;;;;PARA EL PRIMERO;;;;;;;;;;;;;;;
+    section.data
+    comnt      db      "En el segundo"
+    len         equ     $-comnt
