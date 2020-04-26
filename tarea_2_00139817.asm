@@ -35,17 +35,20 @@ write	mov	bl, [comnt+di]
 ;;;;;;;;;;;;;;;;;;EJERCICIO2;;;;;;;;;;;;;;;;;;
 
 mov	    cx, 0000h
-    mov     ax, 0000h
-    mov	    bx, 0000h
 	mov	    di, 0d
 	mov	    bx, 2d
-	mov	    ax, 4d
-    mov     cx, 0011d
+	mov	    ax, 2d
+    mov     cx, 11d
 
-lupita2: mov	[di+210h], ax
-    mul	bx
+lupita2:    mul	    bx
+    
 	
-	inc	di
+    cmp     ax, 0100h
+    jbe     cond
+
+	inc	    di
+cond:       mov     [di+210h], ax
+    inc     di
 
 	loop	lupita2
 
