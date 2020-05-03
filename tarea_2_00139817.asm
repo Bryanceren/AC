@@ -80,6 +80,6 @@ cond:       mov     [di+210h], ax
     int 20h
 
     ;;;;;;;;;;;;;;;;PARA EL PRIMERO;;;;;;;;;;;;;;;
-    section.data
+    section .data
     comnt      db      "En el segundo"
     len         equ     $-comnt
